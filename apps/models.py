@@ -3,7 +3,7 @@ from django.db import models
 
 class Util(models.Model):
     name = models.CharField("Project name", max_length=200)
-    picture = models.ImageField("Project picture", upload_to="media", blank=True, null=True)
+    picture = models.ImageField("Project picture", upload_to="media")
     icon = models.CharField("Icon name", max_length=20)
     author = models.CharField("Project author", max_length=50)
     is_organization = models.BooleanField(default=False)
